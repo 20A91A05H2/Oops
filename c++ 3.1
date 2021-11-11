@@ -1,0 +1,149 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+class bank_acc
+{
+	int accno;
+	char cname[100],acctype[100];
+	double balance;
+	public:
+		bank_acc(int acno,char *name,char *atype,double bal)
+		{
+			accno=acno;
+			cout<<acno;
+			strcpy(cname,name);
+			strcpy(acctype,atype);
+			balance=bal;
+		}
+		void deposite();
+		void withdraw();
+		void display();
+		
+};
+ 
+void bank_acc::deposite()
+{
+	double depamt;
+	cout<<"enter how much amount to deposite:";
+	cin>>depamt;
+	balance+=depamt;
+}
+void bank_acc::withdraw()
+{
+	double amt;
+	char reply;
+	cout<<"Amount withdrawn:"<<amt<<endl;
+	cin>>amt;
+	if(amt<balance)
+	{
+		balance-=amt;
+		cout<<"Amount withdrawn:"<<amt<<endl;
+		cout<<"Do you want to display balance(y/n):";
+		cin>>reply;
+				if(reply=='y'||reply=='y')
+	{
+		cout<<"Balance Amount is:"<<balance<<endl;
+	}
+}
+else
+{
+	cout<<"Balance in your account is less.Cannot Withdraw!!!";
+}
+}
+void bank_acc::display()
+{
+	cout<<"Displaying Account Details"<<endl;
+	cout<<"Name of Account Holder:"<<cname<<endl;
+	cout<<"Account Number:"<<accno<<endl;
+	cout<<"Type of Account:"<<acctype<<endl;
+	cout<<"Balance:"<<balance<<endl;	
+}
+int main()
+{
+	int acno,ch;
+	char name[100],atype[100],rep;
+	double bal;
+	cout<<"Enter details......."<<endl;
+	cout<<"Enter Name of Account Holder:";
+	cin>>name;
+	cout<<"Enter Account Number:";
+	cin>>acno;
+	cout<<"Enter Type of Account:";
+	cin>>atype;
+	cout<<"Enter Amount:";
+	cin>>bal;
+	bank_acc ba(acno,name,atype,bal);
+	cout<<"/n";
+	do
+	{
+		cout<<"  MAIN MENU  "<<endl;
+		cout<<"1.  Deposite Ammount"<<endl;
+		cout<<"2.  Withdraw Ammount"<<endl;
+		cout<<"3.  Display Account Details"<<endl;
+		cout<<"Enter Your Choice(1/2/3/4):";
+		cin>>ch;
+		switch(ch)
+		{
+			case 1:
+				{
+					ba.deposite();
+					break;
+				}
+				case 2:
+					{
+						ba.withdraw();
+						break;
+					}
+					case 3:
+						{
+							ba.display();
+							break;
+						}
+						case 4:
+							{
+								exit(0);
+							}
+							default:
+								exit(0);
+		}
+		cout<<"Do you want to continue(y/n):";
+		cin>>rep;
+	}while(rep!='N'||rep!='n');
+}
+
+output:
+Enter Your Choice(1/2/3/4):2
+Amount withdrawn:4.24399e-314
+500
+Amount withdrawn:500
+Do you want to display balance(y/n):y
+Balance Amount is:2500
+Do you want to continue(y/n):y
+  MAIN MENU
+1.  Deposite Ammount
+2.  Withdraw Ammount
+3.  Display Account Details
+Enter Your Choice(1/2/3/4):3
+Displaying Account Details
+Name of Account Holder:viki
+Account Number:123
+Type of Account:savings
+Balance:2500
+Do you want to continue(y/n):y
+  MAIN MENU
+1.  Deposite Ammount
+2.  Withdraw Ammount
+3.  Display Account Details
+Enter Your Choice(1/2/3/4):1
+enter how much amount to deposite:500
+Do you want to continue(y/n):y
+  MAIN MENU
+1.  Deposite Ammount
+2.  Withdraw Ammount
+3.  Display Account Details
+Enter Your Choice(1/2/3/4):4
+
+--------------------------------
+Process exited after 106.6 seconds with return value 0
+Press any key to continue . . .
