@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class rectangle
+{
+private:
+   float l,b;
+   public:
+   rectangle(float l, float b)
+   {
+   	this->l=l;
+   	this->b=b;
+	   }	
+	   void area()
+	   {
+	   	cout<<"Area of rectangle is"<<l*b<<endl;
+	   }
+};
+int main()
+{
+	rectangle r(3.4,5.6);
+	r.area();
+	return 0;
+}
+
+
+Output:
+
+Area of rectangle is19.04
+
+--------------------------------
+Process exited after 0.04142 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
+
+
+
+
