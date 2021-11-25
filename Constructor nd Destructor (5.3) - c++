@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+class test
+{
+	int i;
+	public:
+		test()
+		{
+			cout<<"Default Constructor"<<endl;
+			i=0;
+		}
+		test(int a)
+		{
+			cout<<"Parameterized Constructor"<<endl;
+			i=a;
+		}
+		test(const test &x)
+		{
+			cout<<"copy constructor"<<endl;
+			i=x.i;
+		}
+		void show()
+		{
+			cout<<i<<endl;
+		}
+};
+int main()
+{
+	test a;
+	a.show();
+	test b(100);
+	b.show();
+	test c(b);
+	c.show();
+}
+
+Output:
+
+Default Constructor
+0
+Parameterized Constructor
+100
+copy constructor
+100
+
+--------------------------------
+Process exited after 0.0414 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
+
+
+
+
+
+
+
