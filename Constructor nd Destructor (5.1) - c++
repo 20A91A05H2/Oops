@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class test
+{
+	public:
+	test()
+	{
+		cout<<"\n Constructor called";
+	}
+	~test()
+	{
+		cout<<"\n Destructor called";
+	}
+};
+int main()
+{
+	test t;
+	return 0;
+}
+
+Output:
+
+
+ Constructor called
+ Destructor called
+--------------------------------
+Process exited after 0.04445 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
