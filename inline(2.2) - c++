@@ -1,18 +1,36 @@
 #include<iostream>
 using namespace std;
-inline int display(int a,int b)
+inline int cube(int a)
 {
-	return a+b;
+return a*a*a;
 }
 int main()
 {
-	cout<<display(3,2);
-	
+	int a;
+	cout<<"Enter a value:";
+	cin>>a;
+	cout<<"cube of"<<a<<"is:"<<cube(a)<<endl;
+	return 0;
 }
-OUTPUT:
-5
+
+Output:
+Enter a value:3
+cube of3is:27
+
 --------------------------------
-Process exited after 0.04393 seconds with return value 0
+Process exited after 7.036 seconds with return value 0
 Press any key to continue . . .
+
+
+
+
+
+
+
+
+
+
+
+
 
 
