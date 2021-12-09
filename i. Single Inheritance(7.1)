@@ -29,3 +29,23 @@ int main()
 	objB.derived_class();
 	return 0;
 }
+
+
+Output:
+
+Base Class Method
+Derived Class Method
+
+--------------------------------
+Process exited after 0.03971 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
+
+
+
+
+
+
