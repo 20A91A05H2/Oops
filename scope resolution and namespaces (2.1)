@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+namespace first_space
+{
+	void fun()
+	{
+		cout<<"inside first_space"<<endl;
+	}
+}
+namespace secound_space
+{
+		void fun()
+	{
+		cout<<" inside secound_space"<<endl;
+	}
+}
+int main()
+{
+	first_space::fun();
+	secound_space::fun();
+	return 0;
+}
+
+Output:
+
+inside first_space
+ inside secound_space
+
+--------------------------------
+Process exited after 0.03587 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
+
