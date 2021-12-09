@@ -1,0 +1,38 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int factorial(int n);
+int main()
+{
+	int n;
+	cout<<"Enter a positive integer:";
+	cin>>n;
+	cout<<"factorial of"<<n<<"="<<factorial(n)<<endl;
+	return 0;
+}
+int factorial(int n)
+{
+if(n>0)
+return n*factorial(n-1);
+else
+return 1;	
+}
+
+Output:
+
+Enter a positive integer:4
+factorial of4=24
+
+--------------------------------
+Process exited after 2.611 seconds with return value 0
+Press any key to continue . . .
+
+
+
+
+
+
+
+
+
+
