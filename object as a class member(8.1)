@@ -1,0 +1,68 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class Marks
+{
+	private:
+		int rno;
+		float perc;
+		public:
+			Marks()
+			{
+				rno=0;
+				perc=0.0f;
+			}
+			void readmarks(void)
+			{
+				cout<<"enter roll number:"<<endl;
+				cin>>rno;
+				cout<<"enter percentege is:"<<endl;
+				cin>>perc;
+			}
+			void printMarks(void)
+			{
+				cout<<"roll no:"<<rno<<endl;
+				cout<<"percentage is:"<<perc<<"%"<<endl;
+			}
+};
+class student
+{
+	private:
+		Marks objM;
+		char name[20];
+		public:
+			void readstudent(void)
+			{
+				cout<<"enter name:";
+				cin.getline(name,20);
+				objM.readmarks();
+			}
+			void printstudent(void)
+			{
+				cout<<"name:"<<name<<endl;
+				objM.printMarks();
+							}
+};
+int main()
+{
+	student std;
+	std.readstudent();
+	std.printstudent();
+	return 0;
+}
+
+Output:
+
+enter name:xiaobai
+enter roll number:
+23
+enter percentege is:
+95
+name:xiaobai
+roll no:23
+percentage is:95%
+
+--------------------------------
+Process exited after 26.99 seconds with return value 0
+Press any key to continue . . .
+
