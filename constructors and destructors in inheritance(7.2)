@@ -19,11 +19,11 @@ class parent2
 		
 		parent2()
 		{
-				cout<<"Inside first base class constructor"<<endl;
+				cout<<"Inside second base class constructor"<<endl;
 		}
 		~parent2()
 		{
-			cout<<"Inside first base class destructor"<<endl;
+			cout<<"Inside second base class destructor"<<endl;
 		}
 };
 class child : public parent1,public parent2
@@ -32,11 +32,11 @@ class child : public parent1,public parent2
 		
 		child()
 		{
-				cout<<"Inside first base class constructor"<<endl;
+				cout<<"Inside child class constructor"<<endl;
 		}
 		~child()
 		{
-			cout<<"Inside first base class destructor"<<endl;
+			cout<<"Inside child class destructor"<<endl;
 		}
 };
 
@@ -46,17 +46,18 @@ int main()
 	return 0;
 }
 
+
 Output:
 
 Inside first base class constructor
-Inside first base class constructor
-Inside first base class constructor
-Inside first base class destructor
-Inside first base class destructor
+Inside second base class constructor
+Inside child class constructor
+Inside child class destructor
+Inside second base class destructor
 Inside first base class destructor
 
 --------------------------------
-Process exited after 0.04179 seconds with return value 0
+Process exited after 0.04739 seconds with return value 0
 Press any key to continue . . .
 
 
